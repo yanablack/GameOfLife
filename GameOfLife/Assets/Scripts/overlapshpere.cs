@@ -6,13 +6,6 @@ public class overlapshpere : MonoBehaviour {
 
     public Transform prefab;
 
-    // Use this for initialization
-    //void Start()
-    //{
-    //    pos = transform.position;
-    //    Debug.Log("pos is " + pos);
-    //}
-
     // Update is called once per frame
     void Update () {
 
@@ -21,12 +14,12 @@ public class overlapshpere : MonoBehaviour {
         {
             if (neighboursInSphere.Length > 3)
             {
-                Destroy(GameObject.Find("main_creature"));
+                Destroy(gameObject);
                 Debug.Log("creature should be destroyed");
             }
             else if (neighboursInSphere.Length < 2)
             {
-                Destroy(GameObject.Find("main_creature"));
+                Destroy(gameObject);
                 Debug.Log("creature should be destroyed");
             }
             else if (neighboursInSphere.Length == 3)
@@ -34,6 +27,11 @@ public class overlapshpere : MonoBehaviour {
                 Instantiate(prefab);
                 Debug.Log("a new creature should be created");
                 //how to allocate the prefab the position of the deleted creature?
+            }
+            else if (neighboursInSphere.Length <= 2)
+            {
+                Instantiate(prefab);
+                Debug.Log("a new creature should be created");
             }
             }
         }

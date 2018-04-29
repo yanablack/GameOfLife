@@ -180,26 +180,11 @@ Prefab:
       propertyPath: m_Name
       value: Creature (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114143798683040092, guid: 3f8e94d82a5ac5745a4780e3bd601eaf, type: 2}
+    - {fileID: 114668250325300216, guid: 3f8e94d82a5ac5745a4780e3bd601eaf, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 3f8e94d82a5ac5745a4780e3bd601eaf, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &120814175 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1254262330985768, guid: 3f8e94d82a5ac5745a4780e3bd601eaf,
-    type: 2}
-  m_PrefabInternal: {fileID: 1929054156}
---- !u!114 &120814176
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 120814175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43a467558e225314397924f351d18f94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefab: {fileID: 4739475076024736, guid: 3f8e94d82a5ac5745a4780e3bd601eaf, type: 2}
 --- !u!1001 &825146883
 Prefab:
   m_ObjectHideFlags: 0
@@ -243,7 +228,9 @@ Prefab:
       propertyPath: m_Name
       value: Creature (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114668250325300216, guid: 3f8e94d82a5ac5745a4780e3bd601eaf, type: 2}
+    - {fileID: 114143798683040092, guid: 3f8e94d82a5ac5745a4780e3bd601eaf, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 3f8e94d82a5ac5745a4780e3bd601eaf, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &898611531 stripped
@@ -487,11 +474,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4739475076024736, guid: 3f8e94d82a5ac5745a4780e3bd601eaf, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.14
       objectReference: {fileID: 0}
     - target: {fileID: 4739475076024736, guid: 3f8e94d82a5ac5745a4780e3bd601eaf, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: 4739475076024736, guid: 3f8e94d82a5ac5745a4780e3bd601eaf, type: 2}
       propertyPath: m_LocalRotation.x
@@ -517,7 +504,9 @@ Prefab:
       propertyPath: m_Name
       value: Creature (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114143798683040092, guid: 3f8e94d82a5ac5745a4780e3bd601eaf, type: 2}
+    - {fileID: 114668250325300216, guid: 3f8e94d82a5ac5745a4780e3bd601eaf, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 3f8e94d82a5ac5745a4780e3bd601eaf, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1783321140
@@ -624,7 +613,8 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114143798683040092, guid: 3f8e94d82a5ac5745a4780e3bd601eaf, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 3f8e94d82a5ac5745a4780e3bd601eaf, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &2011982220
