@@ -32,6 +32,7 @@ public class overlapshpere : MonoBehaviour {
             else if (neighboursInSphere.Length == 3)
             {
                 Instantiate(prefab);
+                Debug.Log("a new creature should be created");
                 //how to allocate the prefab the position of the deleted creature?
             }
             }
@@ -40,7 +41,7 @@ public class overlapshpere : MonoBehaviour {
     private void OnDrawGizmos()
 
     {
-        Gizmos.DrawWireSphere(this.transform.position, 7f);
+        Gizmos.DrawWireSphere(this.transform.position, 4f);
     }
 
 }

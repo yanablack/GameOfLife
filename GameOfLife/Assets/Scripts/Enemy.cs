@@ -24,6 +24,10 @@ public class Enemy : MonoBehaviour {
     private void OnDrawGizmos()
 
     {
+        Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(this.transform.position, 5f);
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(transform.position, transform.position + transform.forward * 5f);
     }
 }
