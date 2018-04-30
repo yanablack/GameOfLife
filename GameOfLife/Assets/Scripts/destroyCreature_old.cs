@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class overlapshpere : MonoBehaviour {
+public class destroyCreature_old : MonoBehaviour {
 
     public Transform prefab;
 

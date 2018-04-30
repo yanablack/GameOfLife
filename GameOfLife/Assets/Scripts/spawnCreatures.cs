@@ -5,7 +5,7 @@ using UnityEngine;
 public class spawnCreatures : MonoBehaviour {
 
     public GameObject[] creatures;
-    private float spawnInterval = 0.3f;
+    public float spawnInterval = 0.3f;
 
     void Start()
     {
