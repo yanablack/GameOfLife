@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 65632496311491232}
   - component: {fileID: 23133804619415924}
   - component: {fileID: 114668250325300216}
-  - component: {fileID: 114143798683040092}
   m_Layer: 0
   m_Name: Creature
   m_TagString: neighbour
@@ -97,18 +96,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114143798683040092
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1254262330985768}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43a467558e225314397924f351d18f94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefab: {fileID: 4739475076024736}
 --- !u!114 &114668250325300216
 MonoBehaviour:
   m_ObjectHideFlags: 1
