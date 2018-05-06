@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class spawnCreatures : MonoBehaviour {
 
-    public GameObject[] creatures;
-    public float spawnInterval = 0.3f;
+    public Transform prefab;
+    public float spawnInterval = 0.5f;
 
     void Start()
     {
@@ -15,6 +15,6 @@ public class spawnCreatures : MonoBehaviour {
     void SpawnCreature()
     {
         Vector3 position = new Vector3(Random.Range(-30.0F, 30.0F), 0, Random.Range(-30.0F, 30.0F));
-        Instantiate(creatures[Random.Range(0, creatures.Length)], position, transform.rotation);
+        Instantiate(prefab, position, Quaternion.identity);
     }
 }

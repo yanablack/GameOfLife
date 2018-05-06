@@ -153,17 +153,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2d9a2e1797a1748b9994fadb9c0e05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  creatures:
-  - {fileID: 1254262330985768, guid: 3f8e94d82a5ac5745a4780e3bd601eaf, type: 2}
-  - {fileID: 1254262330985768, guid: 3f8e94d82a5ac5745a4780e3bd601eaf, type: 2}
-  - {fileID: 1254262330985768, guid: 3f8e94d82a5ac5745a4780e3bd601eaf, type: 2}
-  - {fileID: 1254262330985768, guid: 3f8e94d82a5ac5745a4780e3bd601eaf, type: 2}
-  - {fileID: 1254262330985768, guid: 3f8e94d82a5ac5745a4780e3bd601eaf, type: 2}
-  - {fileID: 1254262330985768, guid: 3f8e94d82a5ac5745a4780e3bd601eaf, type: 2}
-  - {fileID: 1254262330985768, guid: 3f8e94d82a5ac5745a4780e3bd601eaf, type: 2}
-  - {fileID: 1254262330985768, guid: 3f8e94d82a5ac5745a4780e3bd601eaf, type: 2}
-  - {fileID: 1254262330985768, guid: 3f8e94d82a5ac5745a4780e3bd601eaf, type: 2}
-  - {fileID: 1254262330985768, guid: 3f8e94d82a5ac5745a4780e3bd601eaf, type: 2}
+  prefab: {fileID: 4739475076024736, guid: 3f8e94d82a5ac5745a4780e3bd601eaf, type: 2}
+  spawnInterval: 0.5
 --- !u!1 &420489732
 GameObject:
   m_ObjectHideFlags: 0

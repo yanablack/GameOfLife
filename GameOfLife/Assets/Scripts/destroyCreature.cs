@@ -4,34 +4,32 @@ using UnityEngine;
 
 public class destroyCreature : MonoBehaviour {
 
-    private float spawnInterval = 0.3f;
+    private float spawnInterval = 0.5f;
     public float radius;
 
-    void FixedUpdate () {
-        if (Time.time < spawnInterval)
-        {
+    void Update () {
+
+        spawnInterval -= Time.deltaTime;
+        if (spawnInterval >= 0)
+            {
+            Debug.Log("interval hasn't passed yet");
+            spawnInterval = 0.5f;
             return;
-        }
+            }
 
-        foreach(Collider col in Physics.OverlapSphere(transform.position, radius))
-        {
+        foreach (Collider col in Physics.OverlapSphere(transform.position, radius))
+            {
+            int neighbor = 0;
             if (col.tag == "creature")
-            {
-                Debug.Log("should be anothor creature created", gameObject);
-                
-                //neighbour++;
-            }
-            else //if (neighbour == 3)
-            {
-                DestroyImmediate(this);
+                { 
+                neighbor++;
+                }
+            else if (neighbor == 3)
+                {
+                Debug.Log("destroy creature");
+                Destroy(gameObject);
+                }
             }
         }
-        }
-
-    private void OnDrawGizmos()
-
-    {
-        Gizmos.DrawWireSphere(this.transform.position, 4f);
-    }
 
 }
