@@ -8,16 +8,22 @@ public class destroyCreature : MonoBehaviour {
     public float radius;
     private float timer;
 
-    void Update () {
+    void Update()
+        {
+        destroyPrefab();
+        }
+
+    void destroyPrefab()
+        {
 
         timer += Time.deltaTime;
+
         if (timer < spawnInterval)
             {
             Debug.Log("interval hasn't passed yet");
             timer = 0;
             return;
             }
-
         foreach (Collider col in Physics.OverlapSphere(transform.position, radius))
             {
             int neighbor = 0;
@@ -29,7 +35,7 @@ public class destroyCreature : MonoBehaviour {
             else if (neighbor == 3)
                 {
                 Debug.Log("destroy creature");
-                Destroy(this);
+                Destroy(this.gameObject);
                 }
             }
         }
