@@ -6,20 +6,22 @@ public class destroyCreature : MonoBehaviour {
 
     private float spawnInterval = 0.5f;
     public float radius;
+    private float timer;
 
     void Update () {
 
-        spawnInterval -= Time.deltaTime;
-        if (spawnInterval >= 0)
+        timer += Time.deltaTime;
+        if (timer < spawnInterval)
             {
             Debug.Log("interval hasn't passed yet");
-            spawnInterval = 0.5f;
+            timer = 0;
             return;
             }
 
         foreach (Collider col in Physics.OverlapSphere(transform.position, radius))
             {
             int neighbor = 0;
+
             if (col.tag == "creature")
                 { 
                 neighbor++;
@@ -27,7 +29,7 @@ public class destroyCreature : MonoBehaviour {
             else if (neighbor == 3)
                 {
                 Debug.Log("destroy creature");
-                Destroy(gameObject);
+                Destroy(this);
                 }
             }
         }
