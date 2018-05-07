@@ -2,42 +2,36 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class destroyCreature : MonoBehaviour {
+public class DestroyCreature : MonoBehaviour {
 
-    private float spawnInterval = 0.5f;
-    public float radius;
+    public float destroyInterval = 0.5f;
     private float timer;
 
     void Update()
-        {
-        destroyPrefab();
-        }
+    {
+        DestroyPrefab();
+    }
 
-    void destroyPrefab()
-        {
-
+    void DestroyPrefab()
+    {
         timer += Time.deltaTime;
 
-        if (timer < spawnInterval)
-            {
-            Debug.Log("interval hasn't passed yet");
-            timer = 0;
+        if (timer < destroyInterval)
+        {
+            //Debug.Log(timer);
             return;
-            }
-        foreach (Collider col in Physics.OverlapSphere(transform.position, radius))
-            {
-            int neighbor = 0;
-
-            if (col.tag == "creature")
-                { 
-                neighbor++;
-                }
-            else if (neighbor == 3)
-                {
-                Debug.Log("destroy creature");
-                Destroy(this.gameObject);
-                }
-            }
         }
 
-}
+        timer = 0;
+
+        int cn = Neighbors.CountNeighbors(transform);
+        Debug.Log(cn);
+
+        if ((cn < 2) || (cn > 3))
+        {
+            Debug.Log("destroy creature");
+            Destroy(this.gameObject);
+        }
+    }
+}        
+ 
